@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538393785820.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F1E286E7",
+    "lastKnownWriteTime" : 1538504988,
+    "last_content_update" : 1538504988167,
+    "path" : "~/Documents/School/Fall_2018/Research/SN/sn_regression.Rmd",
+    "project_path" : "sn_regression.Rmd",
+    "properties" : {
+        "cursorPosition" : "180,45",
+        "scrollLine" : "157",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

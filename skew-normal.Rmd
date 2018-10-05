@@ -1,0 +1,27 @@
+---
+title: "Skew-normal and skew-t models of Nurture data"
+author: "Carter Allen"
+date: "8/28/2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r}
+library(sn)
+```
+
+```{r}
+nurt <- read_csv("for_sas_no_miss.csv")
+```
+
+## Standard Model
+
+```{r}
+std_model <- lm(data = nurt,
+                zbwga ~ fdsec_statu_0 + momage + sex + baby)
+```
+

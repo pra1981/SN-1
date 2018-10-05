@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538695005861.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3527D4CC",
+    "lastKnownWriteTime" : 1538755889,
+    "last_content_update" : 1538755889630,
+    "path" : "~/Documents/School/Fall_2018/Research/SN/st_lin_regression.R",
+    "project_path" : "st_lin_regression.R",
+    "properties" : {
+        "cursorPosition" : "76,14",
+        "scrollLine" : "48",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : true,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,40 @@
+---
+title: "Derivation of Skew Normal Density"
+author: "Carter Allen"
+date: "9/3/2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+In the 2010 paper by Sylvia Frühwirth-Schnatter and Saumyadipta Pyne titled _Bayesian inference for finite mixtures of univariate and multivariate skew-normal and skew-t distributions_, the authors claim that a standard skew-normal random variable $X$ as defined by Azzalini (1985) can be expressed as as a convex combination of a truncated normal and standard normal random variable. Specifically, if $Z \sim \mathcal{TN}_{[0,\infty)}(0,1)$ and $\epsilon \sim \mathcal{N}(0,1)$, then $X$ defined as
+
+$$X = \delta Z + \sqrt{1-\delta^2} \epsilon$$
+
+is a standard skew-normal random variable with parameter $\alpha = \frac{\delta}{\sqrt{1-\delta^2}}$. The authors claim that $X$ has density function $2\phi(x)\Phi(\alpha X)$, which is Azzalini's original definition of the standard skew-normal distribution. Below is a proof of this claim, which will start with finding an expression for the distribution function of $X$. First though, note the following re-parameterization.
+
+$$X = \delta Z + \sqrt{1-\delta^2} \epsilon = \sqrt{\frac{\alpha^2}{{1+\alpha^2}}}Z + \sqrt{\frac{1}{{1+\alpha^2}}}\epsilon$$
+$$ = \frac{\alpha}{\sqrt{1+\alpha^2}}Z + \frac{1}{\sqrt{1+\alpha^2}}\epsilon = aZ+b\epsilon$$
+$$P(X \le x) = P(aZ + b\epsilon \le x) = \int_0^\infty P(b\epsilon \le x - az | Z = z) P(Z = z) dz$$
+$$\int_0^\infty P(\epsilon \le \frac{x-az}{b}|Z = z)P(Z = z) dz = \int_0^\infty \Phi(\frac{x-az}{b})2\phi(z)dz$$
+
+Note that the pdf of $Z$, a truncated standard normal random variable, is $2\phi(z)$. We wish to differentiate this last expression with respect to $x$ in order to obtain the density function of $X$. Note that the order of integration and differentiation can be switched since $\Phi(\frac{x-az}{b})2\phi(z)$ is continuously differentiable on $[0,\infty)$.
+
+$$\frac{d}{dx} \int_0^\infty \Phi(\frac{x-az}{b})2\phi(z)dz = \int_0^\infty \frac{d}{dx} \Phi(\frac{x-az}{b})2\phi(z)dz$$
+$$=2\int_0^\infty \phi(\frac{x-az}{b}) \frac{1}{b} \phi(z) dz$$
+$$=2\int_0^\infty \frac{1}{\sqrt{2\pi b^2}}e^{-(\frac{x-az}{b})^2/2} \frac{1}{\sqrt{2 \pi}} e^{-z^2/2}dz$$
+$$=2\int_0^\infty \frac{1}{\sqrt{2\pi b^2}}e^{-\frac{x^2-2xaz + a^2z^2}{2b^2}} \frac{1}{\sqrt{2 \pi}} e^{-z^2/2}dz$$
+$$=2\int_0^\infty \frac{1}{\sqrt{2\pi b^2}} \frac{1}{\sqrt{2 \pi}}e^{\frac{-x^2+2xaz - a^2z^2 - b^2z^2}{2b^2}}dz$$
+$$=2\int_0^\infty \frac{1}{\sqrt{2\pi b^2}} \frac{1}{\sqrt{2 \pi}}e^{\frac{-x^2+2xaz - z^2(a^2+b^2)}{2b^2}}dz$$
+
+The fact that $a^2 + b^2 = 1$ can be used now.
+
+$$=2\int_0^\infty \frac{1}{\sqrt{2\pi b^2}} \frac{1}{\sqrt{2 \pi}}e^{-\frac{x^2-2xaz + z^2}{2b^2}}dz$$
+$$=2\int_0^\infty \frac{1}{\sqrt{2\pi b^2}} \frac{1}{\sqrt{2 \pi}}e^{-\frac{z^2-2xaz}{2b^2}}e^{-\frac{x^2}{2b^2}}dz$$
+$$=2\int_0^\infty \frac{1}{\sqrt{2\pi b^2}} \frac{1}{\sqrt{2 \pi}}e^{-\frac{(z-ax)^2-a^2x^2}{2b^2}}e^{-\frac{x^2}{2b^2}}dz$$
+$$=2\int_0^\infty \frac{1}{\sqrt{2\pi b^2}} \frac{1}{\sqrt{2 \pi}}e^{-\frac{(z-ax)^2}{2b^2}}e^{-\frac{x^2-a^2x^2}{2b^2}}dz$$
+$$=2\int_0^\infty \frac{1}{\sqrt{2\pi b^2}} \frac{1}{\sqrt{2 \pi}}e^{-\frac{(z-ax)^2}{2b^2}}e^{-\frac{x^2}{2}}dz$$
+$$=2\phi(x)\int_0^\infty \frac{1}{\sqrt{2\pi b^2}}e^{-\frac{(z-ax)^2}{2b^2}} dz$$
+$$=2\phi(x)[1-\Phi(-\frac{a}{b}x)] = 2\phi(x)\Phi(\alpha x)$$

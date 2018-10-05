@@ -1,0 +1,20 @@
+---
+title: "Modeling Birth Outcomes and Food Security:"
+subtitle: "A comparison of skew-normal and skew-t regression models"
+author: 
+  - "Carter Allen"
+  - "Brian Neelon, PhD"
+  - "Sara Benjamin Neelon, PhD"
+date: "8/23/2018"
+output: pdf_document
+fontsize: 12pt
+linestretch: 1.5
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Abstract
+
+In many applications of classical linear regression, the distribution of residuals exibits non-normal qualities such as skewness or heavy tails, making the assumption of normal error terms difficult to justify. The common statistical suggestion in these cases is to implement a transformation of the response variable, but this can result in a loss of interpretability. The skew-elliptical family is a broad class of probability distributions that contain the normal distribution as a special case and allow for flexible modeling when data exhibit skewness. We examine the properties of skew-normal and skew-t models from both a Bayesian and frequentist perspective, and investigate the computational tools available for fitting these models. Finally, we apply skew-normal and skew-t models to data from the Nurture study, a cohort of mothers who gave birth between 2013 and 2016. Skewed-normal residuals are observed when modeling birth weight for gestational age z-score as a function of food security status during pregnancy in these data. The results of models under several different prior structures and using different available methods of estimation are compared with respect to the impact of food security during pregnancy on birth outcomes. We also extend these results to the multivariate case when modeling infant weight longitudinally over the first year of life. 
