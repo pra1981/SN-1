@@ -3,7 +3,7 @@
 ## Write-Ups
 
 - [Skew-Normal marginal density derivation](skew_normal_density.html)
-- [Bayesian Skew-Normal regression](sn_regression.html)
+
 
 ## R-code
 
