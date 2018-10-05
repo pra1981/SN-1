@@ -2,7 +2,7 @@
 title: "Skew-Normal Regression Gibbs Sampler"
 author: "Carter Allen"
 date: "10/1/2018"
-output: pdf_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}

@@ -1,0 +1,188 @@
+TRUNC = 0.64
+cutoff = 1 / TRUNC;
+
+## pigauss - cumulative distribution function for Inv-Gauss(mu, lambda).
+##------------------------------------------------------------------------------
+pigauss <- function(x, mu, lambda)
+{
+  Z = 1.0 / mu;
+  b = sqrt(lambda / x) * (x * Z - 1);
+  a = -1.0 * sqrt(lambda / x) * (x * Z + 1);
+  y = exp(pnorm(b, log.p=TRUE)) + exp(2 * lambda * Z + pnorm(a, log.p=TRUE));
+  # y2 = 2 * pnorm(-1.0 / sqrt(x));
+  y
+}
+
+mass.texpon <- function(Z)
+{
+  x = TRUNC;
+  fz = pi^2 / 8 + Z^2 / 2;
+  b = sqrt(1.0 / x) * (x * Z - 1);
+  a = -1.0 * sqrt(1.0 / x) * (x * Z + 1);
+  
+  x0 = log(fz) + fz * TRUNC;
+  xb = x0 - Z + pnorm(b, log.p=TRUE);
+  xa = x0 + Z + pnorm(a, log.p=TRUE);
+  
+  qdivp = 4 / pi * ( exp(xb) + exp(xa) );
+  
+  1.0 / (1.0 + qdivp);
+}
+
+## rtigauss - sample from truncated Inv-Gauss(1/abs(Z), 1.0) 1_{(0, TRUNC)}.
+##------------------------------------------------------------------------------
+rtigauss <- function(Z, R=TRUNC)
+{
+  Z = abs(Z);
+  mu = 1/Z;
+  X = R + 1;
+  if (mu > R) {
+    alpha = 0.0;
+    while (runif(1) > alpha) {
+      ## X = R + 1
+      ## while (X > R) {
+      ##     X = 1.0 / rgamma(1, 0.5, rate=0.5);
+      ## }
+      E = rexp(2)
+      while ( E[1]^2 > 2 * E[2] / R) {
+        E = rexp(2)
+      }
+      X = R / (1 + R*E[1])^2
+      alpha = exp(-0.5 * Z^2 * X);
+    }
+  }
+  else {
+    while (X > R) {
+      lambda = 1.0;
+      Y = rnorm(1)^2;
+      X = mu + 0.5 * mu^2 / lambda * Y -
+        0.5 * mu / lambda * sqrt(4 * mu * lambda * Y + (mu * Y)^2);
+      if ( runif(1) > mu / (mu + X) ) {
+        X = mu^2 / X;
+      }
+    }
+  }
+  X;
+}
+
+## rigauss - sample from Inv-Gauss(mu, lambda).
+##------------------------------------------------------------------------------
+rigauss <- function(mu, lambda)
+{
+  nu = rnorm(1);
+  y  = nu^2;
+  x  = mu + 0.5 * mu^2 * y / lambda -
+    0.5 * mu / lambda * sqrt(4 * mu * lambda * y + (mu*y)^2);
+  if (runif(1) > mu / (mu + x)) {
+    x = mu^2 / x;
+  }
+  x
+}
+
+## Calculate coefficient n in density of PG(1.0, 0.0), i.e. J* from Devroye.
+##------------------------------------------------------------------------------
+a.coef <- function(n,x)
+{
+  if ( x>TRUNC )
+    pi * (n+0.5) * exp( -(n+0.5)^2*pi^2*x/2 )
+  else
+    (2/pi/x)^1.5 * pi * (n+0.5) * exp( -2*(n+0.5)^2/x )
+}
+
+## Samples from PG(n=1.0, psi=Z)
+## ------------------------------------------------------------------------------
+rpg.devroye.1 <- function(Z)
+{
+  Z = abs(Z) * 0.5;
+  
+  ## PG(1,z) = 1/4 J*(1,Z/2)
+  fz = pi^2 / 8 + Z^2 / 2;
+  ## p = (0.5 * pi) * exp( -1.0 * fz * TRUNC) / fz;
+  ## q = 2 * exp(-1.0 * Z) * pigauss(TRUNC, 1.0/Z, 1.0);
+  
+  num.trials = 0;
+  total.iter = 0;
+  
+  while (TRUE)
+  {
+    num.trials = num.trials + 1;
+    
+    if ( runif(1) < mass.texpon(Z) ) {
+      ## Truncated Exponential
+      X = TRUNC + rexp(1) / fz
+    }
+    else {
+      ## Truncated Inverse Normal
+      X = rtigauss(Z)
+    }
+    
+    ## C = cosh(Z) * exp( -0.5 * Z^2 * X )
+    
+    ## Don't need to multiply everything by C, since it cancels in inequality.
+    S = a.coef(0,X)
+    Y = runif(1)*S
+    n = 0
+    
+    while (TRUE)
+    {
+      n = n + 1
+      total.iter = total.iter + 1;
+      if ( n %% 2 == 1 )
+      {
+        S = S - a.coef(n,X)
+        if ( Y<=S ) break
+      }
+      else
+      {
+        S = S + a.coef(n,X)
+        if ( Y>S ) break
+      }
+    }
+    
+    if ( Y<=S ) break
+  }
+  
+  ## 0.25 * X
+  list("x"=0.25 * X, "n"=num.trials, "total.iter"=total.iter)
+}
+
+## Sample from PG(n, Z) using Devroye-like method.
+## n is a natural number and z is a positive real.
+##------------------------------------------------------------------------------
+rpg.devroye.R <- function(num=1, n=1, z=0.0)
+{
+  z = array(z, num);
+  n = array(n, num);
+  
+  total.trials = 0;
+  
+  x = rep(0, num);
+  for (i in 1:num) {
+    x[i] = 0;
+    for (j in 1:n[i]) {
+      ## x[i] = x[i] + rpg.devroye.1(z[i])
+      temp = rpg.devroye.1(z[i]);
+      x[i] = x[i] + temp$x;
+      total.trials = total.trials + temp$n;
+    }
+  }
+  x
+  list("x"=x, "rate"=sum(n)/total.trials)
+}
+
+################################################################################
+## PG(n, Z) - Sum of Gammas ##
+################################################################################
+
+## Sample PG(n, z) using sum of Gammas representation.
+##------------------------------------------------------------------------------
+rpg.gamma.R <-function(num=1, n=1, z=0.0, trunc=200)
+{
+  w = rep(0, num);
+  c.i = (1:200-1/2)^2 * pi^2 * 4
+  a.i = c.i + z^2;
+  for(i in 1:num){
+    w[i] = 2.0 * sum(rgamma(trunc,n)/a.i)
+  }
+  w
+}

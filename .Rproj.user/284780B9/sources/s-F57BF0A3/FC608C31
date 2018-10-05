@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538761150705.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "FC608C31",
+    "lastKnownWriteTime" : 1538761155,
+    "last_content_update" : 1538761155814,
+    "path" : "~/Documents/School/Fall_2018/Research/SN/skew_normal_density.Rmd",
+    "project_path" : "skew_normal_density.Rmd",
+    "properties" : {
+        "cursorPosition" : "4,12",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

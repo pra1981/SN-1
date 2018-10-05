@@ -22,3 +22,127 @@ Branch master set up to track remote branch master from origin.
 [?2004h]0;fish  /Users/carter/Documents/School/Fall_2018/Research/SN[30m(B[m[38;5;237m⏎(B[m                                                                                                     ⏎ [2Kcarter@Carters-MacBook-Pro [32m~/D/S/F/R/SN[30m(B[m> [K[7m^C[30m(B[m[K
 [Acarter@Carters-MacBook-Pro [32m~/D/S/F/R/SN[30m(B[m> [K
 [K[A[41C]0;fish  /Users/carter/Documents/School/Fall_2018/Research/SN[30m(B[mcarter@Carters-MacBook-Pro [32m~/D/S/F/R/SN[30m(B[m> [Kg[38;5;240mit push -u origin master[24D[30m(B[m[91mg[38;5;240mit push -u origin master[24D[30m(B[m[91mi[38;5;240mt push -u origin master[23D[30m(B[m[91mt[38;5;240m push -u origin master[22D[30m(B[m[1mgit(B[m[38;5;240m push -u origin master[22D[30m(B[m[1m (B[m[38;5;240mpush -u origin master[21D[30m(B[m [38;5;240mpush -u origin master[21D[30m(B[ma[K[38;5;240mdd README.md[12D[30m(B[m[36m[4ma[38;5;240m[24mdd README.md[12D[30m(B[m[36m[4ms[30m(B[m[K[36m[4mAS[38;5;240m[24mA-poster_results.R [19D[30m(B[m[36m[4ma[30m(B[m[K[36m[4md[30m(B[m[38;5;240md README.md[11D[30m(B[m[36mad[38;5;240md README.md[11D[30m(B[m[36md[38;5;240m README.md[10D[30m(B[m[36m [38;5;240mREADME.md[9D[30m(B[m [38;5;240mREADME.md[9D[30m(B[m-[K[38;5;240mA[30m(B[m[36m-[38;5;240mA[30m(B[m[36ma[30m(B[m[K[36mA[30m(B[m
+[30m(B[m[?2004l]0;git  /Users/carter/Documents/School/Fall_2018/Research/SN[30m(B[m[?2004h]0;fish  /Users/carter/Documents/School/Fall_2018/Research/SN[30m(B[m[38;5;237m⏎(B[m                                                                                                     ⏎ [2Kcarter@Carters-MacBook-Pro [32m~/D/S/F/R/SN[30m(B[m> [Kg[38;5;240mit add -A[9D[30m(B[m[91mg[38;5;240mit add -A[9D[30m(B[m[91mi[38;5;240mt add -A[30m(B[m[91mt[38;5;240m add -A[30m(B[m[1mgit(B[m[38;5;240m add -A[30m(B[m[1m (B[m[38;5;240madd -A[30m(B[m [38;5;240madd -A[30m(B[mc[K[38;5;240mommit -m "first commit"[23D[30m(B[m[36mc[38;5;240mommit -m "first commit"[23D[30m(B[m[36mo[38;5;240mmmit -m "first commit"[22D[30m(B[m[36mm[38;5;240mmit -m "first commit"[21D[30m(B[m[36mmit -m "first commit"[30m(B[m[18D [36m-m[30m(B[m [33m"first commit"[30m(B[m
+[30m(B[m[?2004l]0;git  /Users/carter/Documents/School/Fall_2018/Research/SN[30m(B[m[master e25957b] first commit
+ 108 files changed, 11325 insertions(+)
+ create mode 100644 .Rhistory
+ create mode 100644 .Rproj.user/284780B9/console06/35AD976F
+ create mode 100644 .Rproj.user/284780B9/console06/INDEX001
+ create mode 100644 .Rproj.user/284780B9/pcs/files-pane.pper
+ create mode 100644 .Rproj.user/284780B9/pcs/source-pane.pper
+ create mode 100644 .Rproj.user/284780B9/pcs/source-window.pper
+ create mode 100644 .Rproj.user/284780B9/pcs/windowlayoutstate.pper
+ create mode 100644 .Rproj.user/284780B9/pcs/workbench-pane.pper
+ create mode 100644 .Rproj.user/284780B9/persistent-state
+ create mode 100644 .Rproj.user/284780B9/rmd-outputs
+ create mode 100644 .Rproj.user/284780B9/saved_source_markers
+ create mode 100644 .Rproj.user/284780B9/sources/prop/1D8865AA
+ create mode 100644 .Rproj.user/284780B9/sources/prop/2C893BF8
+ create mode 100644 .Rproj.user/284780B9/sources/prop/819B43A5
+ create mode 100644 .Rproj.user/284780B9/sources/prop/8E0DB21A
+ create mode 100644 .Rproj.user/284780B9/sources/prop/93321111
+ create mode 100644 .Rproj.user/284780B9/sources/prop/AA170D81
+ create mode 100644 .Rproj.user/284780B9/sources/prop/AE514E41
+ create mode 100644 .Rproj.user/284780B9/sources/prop/BB9F1495
+ create mode 100644 .Rproj.user/284780B9/sources/prop/C043C001
+ create mode 100644 .Rproj.user/284780B9/sources/prop/D02E64D8
+ create mode 100644 .Rproj.user/284780B9/sources/prop/E02DA255
+ create mode 100644 .Rproj.user/284780B9/sources/prop/EF453198
+ create mode 100644 .Rproj.user/284780B9/sources/prop/F6559601
+ create mode 100644 .Rproj.user/284780B9/sources/prop/FCD4B29C
+ create mode 100644 .Rproj.user/284780B9/sources/prop/INDEX
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/3527D4CC
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/3527D4CC-contents
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/9194BB7A-contents
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/C4D5B9FE-contents
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/C6F4768A
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/C6F4768A-contents
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/E95BA907
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/E95BA907-contents
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/F1E286E7
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/F1E286E7-contents
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/F79EAA68
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/F79EAA68-contents
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/FE5A073F-contents
+ create mode 100644 .Rproj.user/284780B9/sources/s-F57BF0A3/lock_file
+ create mode 100644 .Rproj.user/809C0F19/console06/INDEX001
+ create mode 100644 .Rproj.user/809C0F19/pcs/files-pane.pper
+ create mode 100644 .Rproj.user/809C0F19/pcs/source-pane.pper
+ create mode 100644 .Rproj.user/809C0F19/pcs/windowlayoutstate.pper
+ create mode 100644 .Rproj.user/809C0F19/pcs/workbench-pane.pper
+ create mode 100644 .Rproj.user/809C0F19/rmd-outputs
+ create mode 100644 .Rproj.user/809C0F19/saved_source_markers
+ create mode 100644 .Rproj.user/shared/notebooks/48BB94A3-Installing_BayesLogit-V2/1/284780B9F15F4758/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/48BB94A3-Installing_BayesLogit-V2/1/s/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/BB57A230-sn_regression/1/284780B97464CE5E/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/BB57A230-sn_regression/1/284780B9B36D419B/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/BB57A230-sn_regression/1/284780B9F13223FA/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/BB57A230-sn_regression/1/s/chunks.json
+ create mode 100644 .Rproj.user/shared/notebooks/patch-chunk-names
+ create mode 100644 .Rproj.user/shared/notebooks/paths
+ create mode 100644 .azzalini_2003.pdf.icloud
+ create mode 100644 ASA-poster_results.R
+ create mode 100644 BayesLogit.tar.gz
+ create mode 100644 DiCiccio_2011.pdf
+ create mode 100644 Fruhwirth-Schnatter and Pyne (2010) Bayesian Inference for Skew-Normal Mixtures.pdf
+ create mode 100644 Neelon et al. (2015) Bayesian two-part spatial models.pdf
+ create mode 100644 OHagan_1976.pdf
+ create mode 100644 Research.Rproj
+ create mode 100644 azzalini_1985.pdf
+ create mode 100644 azzalini_1996.pdf
+ create mode 100644 azzalini_1999.pdf
+ create mode 100644 azzalini_2002.pdf
+ create mode 100644 azzalini_2006.pdf
+ create mode 100644 bayes_logit.R
+ create mode 100644 for_sas_no_miss.csv
+ create mode 100644 henze_1986.pdf
+ create mode 100644 linear_regression.R
+ create mode 100644 poster/.ThesisPoster.lb
+ create mode 100644 poster/.main.lb
+ create mode 100644 poster/ASA-poster.log
+ create mode 100644 poster/ASA-poster.nav
+ create mode 100644 poster/ASA-poster.pdf
+ create mode 100644 poster/ASA-poster.snm
+ create mode 100644 poster/ASA-poster.synctex.gz
+ create mode 100644 poster/ASA-poster.tex
+ create mode 100644 poster/ASA-poster.toc
+ create mode 100644 poster/ThesisPoster.log
+ create mode 100644 poster/ThesisPoster.nav
+ create mode 100644 poster/ThesisPoster.pdf
+ create mode 100644 poster/ThesisPoster.snm
+ create mode 100644 poster/ThesisPoster.synctex.gz
+ create mode 100644 poster/ThesisPoster.toc
+ create mode 100755 poster/beamerposter.sty
+ create mode 100755 poster/beamerthemeconfposter.sty
+ create mode 100644 poster/main.log
+ create mode 100644 poster/main.tex
+ create mode 100644 poster/skew-resids.png
+ create mode 100644 skew-normal.Rmd
+ create mode 100644 skew_normal_density.Rmd
+ create mode 100644 skew_normal_density.pdf
+ create mode 100644 sn-trace.png
+ create mode 100644 sn_ahbstract_draft.Rmd
+ create mode 100644 sn_ahbstract_draft.pdf
+ create mode 100644 sn_lin_regression-DEBUG.R
+ create mode 100644 sn_lin_regression-V2.R
+ create mode 100644 sn_lin_regression-V2.html
+ create mode 100644 sn_lin_regression.R
+ create mode 100644 sn_regression.Rmd
+ create mode 100644 sn_regression.pdf
+ create mode 100644 sn_sampler.R
+ create mode 100644 st_lin_regression.R
+ create mode 100644 trace-plots_10-02.pdf
+ create mode 100644 yu_2014.pdf
+[?2004h]0;fish  /Users/carter/Documents/School/Fall_2018/Research/SN[30m(B[m[38;5;237m⏎(B[m                                                                                                     ⏎ [2Kcarter@Carters-MacBook-Pro [32m~/D/S/F/R/SN[30m(B[m> [Kg[91mg[30m(B[m[38;5;240mit commit -m "first commit"[27D[30m(B[m[91mi[38;5;240mt commit -m "first commit"[26D[30m(B[m[91mt[38;5;240m commit -m "first commit"[25D[30m(B[m[1mgit(B[m[38;5;240m commit -m "first commit"[25D[30m(B[m[1m (B[m[38;5;240mcommit -m "first commit"[24D[30m(B[m [38;5;240mcommit -m "first commit"[24D[30m(B[mp[K[38;5;240mush -u origin master[20D[30m(B[m[36m[4mp[38;5;240m[24mush -u origin master[20D[30m(B[m[36m[4mu[38;5;240m[24msh -u origin master[19D[30m(B[m[36mpu[38;5;240msh -u origin master[19D[30m(B[m[36ms[38;5;240mh -u origin master[18D[30m(B[m[36mh -u origin master[30m(B[m[17D [36m-u[30m(B[m [36morigin[30m(B[m [36mmaster[30m(B[m
+[30m(B[m[?2004l]0;git  /Users/carter/Documents/School/Fall_2018/Research/SN[30m(B[mCounting objects: 113, done.
+Delta compression using up to 8 threads.
+Compressing objects:   1% (1/98)   Compressing objects:   2% (2/98)   Compressing objects:   3% (3/98)   Compressing objects:   4% (4/98)   Compressing objects:   5% (5/98)   Compressing objects:   6% (6/98)   Compressing objects:   7% (7/98)   Compressing objects:   8% (8/98)   Compressing objects:   9% (9/98)   Compressing objects:  10% (10/98)   Compressing objects:  11% (11/98)   Compressing objects:  12% (12/98)   Compressing objects:  13% (13/98)   Compressing objects:  14% (14/98)   Compressing objects:  15% (15/98)   Compressing objects:  16% (16/98)   Compressing objects:  17% (17/98)   Compressing objects:  18% (18/98)   Compressing objects:  19% (19/98)   Compressing objects:  20% (20/98)   Compressing objects:  21% (21/98)   Compressing objects:  22% (22/98)   Compressing objects:  23% (23/98)   Compressing objects:  24% (24/98)   Compressing objects:  25% (25/98)   Compressing objects:  26% (26/98)   Compressing objects:  27% (27/98)   Compressing objects:  28% (28/98)   Compressing objects:  29% (29/98)   Compressing objects:  30% (30/98)   Compressing objects:  31% (31/98)   Compressing objects:  32% (32/98)   Compressing objects:  33% (33/98)   Compressing objects:  34% (34/98)   Compressing objects:  35% (35/98)   Compressing objects:  36% (36/98)   Compressing objects:  37% (37/98)   Compressing objects:  38% (38/98)   Compressing objects:  39% (39/98)   Compressing objects:  40% (40/98)   Compressing objects:  41% (41/98)   Compressing objects:  42% (42/98)   Compressing objects:  43% (43/98)   Compressing objects:  44% (44/98)   Compressing objects:  45% (45/98)   Compressing objects:  46% (46/98)   Compressing objects:  47% (47/98)   Compressing objects:  48% (48/98)   Compressing objects:  50% (49/98)   Compressing objects:  51% (50/98)   Compressing objects:  52% (51/98)   Compressing objects:  53% (52/98)   Compressing objects:  54% (53/98)   Compressing objects:  55% (54/98)   Compressing objects:  56% (55/98)   Compressing objects:  57% (56/98)   Compressing objects:  58% (57/98)   Compressing objects:  59% (58/98)   Compressing objects:  60% (59/98)   Compressing objects:  61% (60/98)   Compressing objects:  62% (61/98)   Compressing objects:  63% (62/98)   Compressing objects:  64% (63/98)   Compressing objects:  65% (64/98)   Compressing objects:  66% (65/98)   Compressing objects:  67% (66/98)   Compressing objects:  68% (67/98)   Compressing objects:  69% (68/98)   Compressing objects:  70% (69/98)   Compressing objects:  71% (70/98)   Compressing objects:  72% (71/98)   Compressing objects:  73% (72/98)   Compressing objects:  74% (73/98)   Compressing objects:  75% (74/98)   Compressing objects:  76% (75/98)   Compressing objects:  77% (76/98)   Compressing objects:  78% (77/98)   Compressing objects:  79% (78/98)   Compressing objects:  80% (79/98)   Compressing objects:  81% (80/98)   Compressing objects:  82% (81/98)   Compressing objects:  83% (82/98)   Compressing objects:  84% (83/98)   Compressing objects:  85% (84/98)   Compressing objects:  86% (85/98)   Compressing objects:  87% (86/98)   Compressing objects:  88% (87/98)   Compressing objects:  89% (88/98)   Compressing objects:  90% (89/98)   Compressing objects:  91% (90/98)   Compressing objects:  92% (91/98)   Compressing objects:  93% (92/98)   Compressing objects:  94% (93/98)   Compressing objects:  95% (94/98)   Compressing objects:  96% (95/98)   Compressing objects:  97% (96/98)   Compressing objects:  98% (97/98)   Compressing objects: 100% (98/98)   Compressing objects: 100% (98/98), done.
+Writing objects:   0% (1/113)   Writing objects:   1% (2/113)   Writing objects:   2% (3/113)   Writing objects:   3% (4/113)   Writing objects:   4% (5/113)   Writing objects:   5% (6/113)   Writing objects:   6% (7/113)   Writing objects:   7% (8/113)   Writing objects:   9% (11/113)   Writing objects:  10% (12/113)   Writing objects:  11% (13/113)   Writing objects:  12% (14/113)   Writing objects:  13% (15/113)   Writing objects:  14% (16/113)   Writing objects:  15% (17/113)   Writing objects:  16% (19/113)   Writing objects:  17% (20/113)   Writing objects:  18% (21/113)   Writing objects:  19% (22/113)   Writing objects:  20% (23/113)   Writing objects:  21% (24/113)   Writing objects:  23% (26/113)   Writing objects:  25% (29/113)   Writing objects:  26% (30/113)   Writing objects:  27% (31/113)   Writing objects:  28% (32/113)   Writing objects:  29% (33/113)   Writing objects:  30% (34/113)   Writing objects:  31% (36/113)   Writing objects:  32% (37/113)   Writing objects:  33% (38/113)   Writing objects:  35% (40/113)   Writing objects:  36% (41/113)   Writing objects:  37% (42/113)   Writing objects:  38% (43/113)   Writing objects:  40% (46/113)   Writing objects:  41% (47/113)   Writing objects:  42% (48/113)   Writing objects:  43% (49/113)   Writing objects:  44% (50/113)   Writing objects:  45% (51/113)   Writing objects:  46% (52/113)   Writing objects:  47% (54/113)   Writing objects:  48% (55/113)   Writing objects:  49% (56/113)   Writing objects:  50% (57/113)   Writing objects:  51% (58/113)   Writing objects:  52% (59/113)   Writing objects:  53% (60/113)   Writing objects:  54% (62/113)   Writing objects:  55% (63/113)   Writing objects:  56% (64/113)   Writing objects:  57% (65/113)   Writing objects:  58% (66/113)   Writing objects:  59% (67/113)   Writing objects:  60% (68/113)   Writing objects:  61% (69/113)   Writing objects:  62% (71/113)   Writing objects:  63% (72/113)   Writing objects:  64% (73/113)   Writing objects:  65% (74/113)   Writing objects:  66% (75/113)   Writing objects:  67% (76/113)   Writing objects:  68% (77/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  69% (78/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  70% (80/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  71% (81/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  72% (82/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  73% (83/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  74% (84/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  75% (85/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  76% (86/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  77% (88/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  78% (89/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  79% (90/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  80% (91/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  81% (92/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  82% (93/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  83% (94/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  84% (95/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  85% (97/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  86% (98/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  87% (99/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  88% (100/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  89% (101/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  90% (102/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  91% (103/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  92% (104/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  93% (106/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  94% (107/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  95% (108/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  96% (109/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  97% (110/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  98% (111/113), 1.07 MiB | 2.00 MiB/s   Writing objects:  99% (112/113), 1.07 MiB | 2.00 MiB/s   Writing objects: 100% (113/113), 1.07 MiB | 2.00 MiB/s   Writing objects: 100% (113/113), 6.44 MiB | 7.04 MiB/s, done.
+Total 113 (delta 15), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/15)   [Kremote: Resolving deltas:   6% (1/15)   [Kremote: Resolving deltas:  13% (2/15)   [Kremote: Resolving deltas:  26% (4/15)   [Kremote: Resolving deltas:  40% (6/15)   [Kremote: Resolving deltas:  53% (8/15)   [Kremote: Resolving deltas:  66% (10/15)   [Kremote: Resolving deltas:  73% (11/15)   [Kremote: Resolving deltas:  80% (12/15)   [Kremote: Resolving deltas:  86% (13/15)   [Kremote: Resolving deltas: 100% (15/15)   [Kremote: Resolving deltas: 100% (15/15), done.[K
+To https://github.com/carter-allen/SN.git
+   e94391c..e25957b  master -> master
+Branch master set up to track remote branch master from origin.
+[?2004h]0;fish  /Users/carter/Documents/School/Fall_2018/Research/SN[30m(B[m[38;5;237m⏎(B[m                                                                                                     ⏎ [2Kcarter@Carters-MacBook-Pro [32m~/D/S/F/R/SN[30m(B[m> [K[7m^C[30m(B[m[K
+[Acarter@Carters-MacBook-Pro [32m~/D/S/F/R/SN[30m(B[m> [K
+[K[A[41C]0;fish  /Users/carter/Documents/School/Fall_2018/Research/SN[30m(B[mcarter@Carters-MacBook-Pro [32m~/D/S/F/R/SN[30m(B[m> [K]0;fish  /Users/carter/Documents/School/Fall_2018/Research/SN[30m(B[mcarter@Carters-MacBook-Pro [32m~/D/S/F/R/SN[30m(B[m> [Jg[91mg[30m(B[m[38;5;240mit push -u origin master[24D[30m(B[m[91mi[38;5;240mt push -u origin master[23D[30m(B[m[91mt[38;5;240m push -u origin master[22D[30m(B[m[1mgit(B[m[38;5;240m push -u origin master[22D[30m(B[m[1m (B[m[38;5;240mpush -u origin master[21D[30m(B[m [38;5;240mpush -u origin master[21D[30m(B[ma[K[38;5;240mdd -A[30m(B[m[36m[4ma[38;5;240m[24mdd -A[30m(B[m[36m[4md[38;5;240m[24md -A[30m(B[m[36mad[38;5;240md -A[30m(B[m[36md[38;5;240m -A[30m(B[m[36m -A[30m(B[m [36m-A[30m(B[m
