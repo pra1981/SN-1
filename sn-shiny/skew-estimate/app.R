@@ -1,6 +1,10 @@
-
-
+library(tidyverse)
+library(ggplot2)
 library(shiny)
+library(skewR)
+library(truncnorm)
+library(mvtnorm)
+library(sn)
 
 # Define UI for data upload app ----
 ui <- fluidPage(
@@ -47,7 +51,8 @@ ui <- fluidPage(
         mainPanel(
             
             # Output: Data file ----
-            tableOutput("contents")
+            plotOutput("post"),
+            textOutput("CI")
             
         )
         
@@ -57,7 +62,7 @@ ui <- fluidPage(
 # Define server logic to read selected file ----
 server <- function(input, output) {
     
-    output$contents <- renderTable({
+    output$post <- renderPlot({
         
         req(input$file1)
         
@@ -74,9 +79,20 @@ server <- function(input, output) {
                 stop(safeError(e))
             }
         )
-        y <- df[,1]
+        y <- df[,2]
+        withProgress(message = "Running Gibbs sampler",
+                     expr = {alphas <- skewR::sample_skew_posterior(y)})
+        ggplot() + 
+            geom_histogram(aes(x = alphas),alpha = 0.8,fill = "cadetblue") + 
+            ggtitle("Posterior sample of skewness parameter") + 
+            geom_vline(xintercept = quantile(alphas,0.025), color ="grey") + 
+            geom_vline(xintercept = quantile(alphas,0.975), color = "grey") + 
+            theme_minimal() + 
+            labs(subtitle = paste("With 95% Credible Interval between",round(quantile(alphas,0.025),2),"and",round(quantile(alphas,0.975),2)))
         
     })
+    
+    
     
 }
 

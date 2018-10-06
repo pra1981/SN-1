@@ -1,0 +1,12 @@
+name: skew-estimate
+title: skew-estimate
+username:
+account: carter-allen
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 497259
+bundleId: 1626407
+url: https://carter-allen.shinyapps.io/skew-estimate/
+when: 1538808263.9214
+asMultiple: FALSE
+asStatic: FALSE
