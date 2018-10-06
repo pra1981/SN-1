@@ -11,4 +11,4 @@
 
 ## Posters
 
-- [SC ASA Conference (Oct. 13 2018)](poster/ASA-poster.pdf)
+- [SC ASA Conference (Oct. 13 2018)](poster/ASA-poster.pdf)# skewR
