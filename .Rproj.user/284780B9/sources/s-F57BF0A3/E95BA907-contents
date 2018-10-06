@@ -24,6 +24,8 @@
 
 \documentclass[final]{beamer}
 
+\usepackage{graphicx}
+\usepackage{blindtext}
 \usepackage[scale=1.24]{beamerposter} % Use the beamerposter package for laying out the poster
 
 \usetheme{confposter} % Use the confposter theme supplied with this template
@@ -65,9 +67,9 @@
 
 \title{Bayesian Skew-Normal and Skew-t Models of Birth Weight and Food Security} % Poster title
 
-\author{Carter Allen; Brian Neelon, PhD; Sara E. Benjamin Neelon, PhD, JD, MPH} % Author(s)
+\author{Carter Allen$^1$; Brian Neelon, PhD$^1$; Sara E. Benjamin Neelon, PhD, JD, MPH$^2$} % Author(s)
 
-\institute{Department of Public Health Sciences, Medical University of South Carolina} % Institution(s)
+\institute{$^1$Department of Public Health Sciences, Medical University of South Carolina; $^2$Bloomberg School of Public Health, Johns Hopkins University}
 
 %----------------------------------------------------------------------------------------
 
@@ -155,8 +157,15 @@ where $t_0$ and $T_0$ are the density and mass functions of the student's $t$ di
 %	METHODS
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Comparison Criteria}
+\begin{block}{Full Conditionals}
 
+Let $Y_{i} = \mathbf{x}_i \mathbf{\beta} + \psi z_i + \sigma \epsilon$ with $Z \sim N_+(0,1)$, and $\epsilon \sim N(0,1)$. Define $\mathbf{X}^* = [\mathbf{X} | \mathbf{z}]$, and $\mathbf{\beta}^* = [\beta_0, \beta_1,...,\beta_p, \psi]$. Then,
+
+$$\mathbf{\beta}^*|Y,\mathbf{X}^*,\tau \sim N_{p+2}(\frac{(T_0 \beta_0 + \tau \mathbf{X}^{*T}Y)}{\tau \mathbf{X}^{*T}\mathbf{X}^* + T_0},\tau \mathbf{X}^{*T}\mathbf{X}^* + T_0)$$
+
+$$\tau|\beta^*,\mathbf{X}^{*},Y \sim \Gamma(n/2 + \alpha,\frac{1}{2}(Y-\mathbf{X}^*\beta^*)^T(Y-\mathbf{X}^*\beta^*)+b)$$
+
+$$z_i|y_i,\mathbf{x}_i,\beta,\tau \sim N_+(\frac{\psi \tau(y_i -  \mathbf{x}_i\beta)}{\tau \psi^2 +1},\frac{1}{\tau\psi^2+1})$$
 
 \end{block}
 
@@ -172,7 +181,7 @@ where $t_0$ and $T_0$ are the density and mass functions of the student's $t$ di
 
 \begin{alertblock}{Important Results}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Through simulation studies, we validated Bayesian Gibbs samplers for skew-normal and skew-t error regression models. We used these models to find an association between birth weight and food security during pregnancy using data from the Nurture study.  
 
 \end{alertblock} 
 
@@ -195,6 +204,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 $$Y_i = \mathbf{x}_i \beta + \psi z_i + \sigma \epsilon$$
 
+where $z_i \sim N_+(0,1)$ and $\epsilon \sim N(0,1)$. The marginal density of $Y_i$ integrating over $z_i$ and $\epsilon$ is $\mathcal{SN}(\mathbf{x}_i \beta, \omega^2)$. We use this stochastic representation to obtain full conditionals for all parameters. 
+
 \end{enumerate}
 
 \end{block}
@@ -209,22 +220,23 @@ $$Y_i = \mathbf{x}_i \beta + \psi z_i + \sigma \epsilon$$
 %	RESULTS
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Imputation Results}
+\begin{block}{Gibbs Sampler Simulation}
 
 \begin{figure}
-\includegraphics[width=0.75\linewidth]{truncSamp.png}
-\caption{Simulated model parameter estimates method 2}
+\includegraphics[width=1\linewidth]{sim-trace.pdf}
+\caption{Trace plots for skew normal Gibbs sampler simulation}
 \end{figure}
 
 \begin{table}
 \vspace{0ex}
 \begin{tabular}{l l l l}
 \toprule
-\textbf{Method} & \textbf{Abs. Err.} & \textbf{Bias} & \textbf{Variance}\\
+\textbf{Parameter} & \textbf{True} & \textbf{MLE} & \textbf{Gibbs}\\
 \midrule
-1 & 8.417 & 0.576 & 0.229\\
-2 & 2.187 & -0.009 & 0.002\\
-3 & 9.476 & -0.493 & 1.1619\\
+$\alpha$ & 4.00 & 0.3928 & 4.016\\
+$\beta_0$ & 1.00 & 1.013 & 1.009\\
+$\beta_1$ & 2.00 & 2.006 & 2.01\\
+$\sigma^2$ & 0.235 & 0.257 & 0.257\\
 \bottomrule
 \end{tabular}
 
@@ -248,22 +260,26 @@ $$Y_i = \mathbf{x}_i \beta + \psi z_i + \sigma \epsilon$$
 %	CONCLUSION
 %----------------------------------------------------------------------------------------
 
+
+
+\begin{figure}
+\includegraphics[height=0.8\linewidth,width = 1\linewidth]{sim-post.pdf}
+\caption{Simulated posterior distributions}
+\end{figure}
+
 \begin{block}{Modeling Results}
 
 \begin{figure}
-\includegraphics[width=0.8\linewidth]{4.png}
-\caption{Model summary}
-\end{figure}
-
-\begin{figure}
-\includegraphics[width=0.8\linewidth]{3.png}
-\caption{Residual analysis}
+\includegraphics[width=1\linewidth]{nurt_posteriors.pdf}
+\caption{Posterior distributions of model parameters}
 \end{figure}
 
 \end{block}
 
-\begin{block}{Conclusion}
-Missing and censored values are best imputed by using Method 2, \textit{Sampling from a Truncated Normal}. A general lineral model can be built after imputing according to Method 2, and used in the future to predict \textit{Enterococcus} concentrations in Charleston, SC.
+\begin{block}{References}
+
+\tiny  \textbf{(1) Azzalini, S. (1985)}. A class of distributions which includes the normal ones. SJS; \textbf{(2) Fruhwirth-Schnatter, S and Pyne, S. (2010)}. Bayesian inference for finite mixtures of univariate ... Biostatistics; \textbf{(3) Benjamin-Neelon SE, Ostbye T, Bennett GG, et al.} Cohort profile for the Nurture Observational Study ... BMJ Open 2017; \textbf{(4) Neelon, B. (2015)} Bayesian two-part spatial models ... Biostatistics.
+
 \end{block}
 
 
@@ -287,7 +303,11 @@ Missing and censored values are best imputed by using Method 2, \textit{Sampling
 \begin{alertblock}{Further Resources}
 
 \centering
-https://carter-allen.github.io
+https://carter-allen.github.io/SN
+
+\begin{figure}
+\includegraphics[width = .2\linewidth]{frame.png}
+\end{figure}
 
 \end{alertblock}
 

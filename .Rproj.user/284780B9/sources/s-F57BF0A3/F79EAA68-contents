@@ -10,7 +10,7 @@ library(ggplot2)
 
 # Generate Data
 # set.seed(1801)
-n <- 1000 # number of observations
+n <- 500 # number of observations
 x <- rnorm(n) # random normal predictors
 X <- cbind(1,x) # design matrix w/ intercept
 beta <- c(1,2) # true beta vector: beta0, beta1
@@ -28,7 +28,7 @@ T0 <- diag(0.01,p) # prior precision for beta with psi
 a <- b <- 0.001 # gamma hyper parameters for tau
 
 # Initialize
-tau <- 1 # initial precision
+tau <- 4 # initial precision
 psi <- 0 # initial psi
 betastar <- c(0,0,psi) # initial beta0, beta1, psi
 z <- rep(0,n) # empty z storage
@@ -90,12 +90,37 @@ beepr::beep()
 
 run.time<-proc.time()-tmp
 
+theme_set(theme_minimal(base_family = "serif"))
 p1 <- ggplot() + 
   geom_line(aes(x = 1:lastit, y = Alpha)) + 
-  geom_hline(yintercept = alpha)
+  geom_hline(yintercept = alpha) + 
+  xlab(NULL) + 
+  ylab(expression(alpha))
 p2 <- ggplot() + 
   geom_line(aes(x = 1:lastit, y = Betastar[,1])) + 
-  geom_hline(yintercept = beta[1])
+  geom_hline(yintercept = beta[1]) + 
+  xlab(NULL) + 
+  ylab(expression(beta[0]))
 p3 <- ggplot() + 
   geom_line(aes(x = 1:lastit, y = Betastar[,2])) + 
-  geom_hline(yintercept = beta[2])
+  geom_hline(yintercept = beta[2])+ 
+  xlab(NULL)+ 
+  ylab(expression(beta[1]))
+p4 <- ggplot() + 
+  geom_line(aes(x = 1:lastit, y = Sigma2)) + 
+  geom_hline(yintercept = omega^2/(1+alpha^2))+ 
+  xlab("Iteration")+ 
+  ylab(expression(sigma^2))
+p5 <- ggplot() + 
+  geom_histogram(aes(x = Alpha[150:lastit])) + 
+  xlab(expression(alpha))
+p6 <- ggplot() + 
+  geom_histogram(aes(x = Betastar[,1][150:lastit])) + 
+  xlab(expression(beta[0]))
+p7 <- ggplot() + 
+  geom_histogram(aes(x = Betastar[,2][150:lastit])) + 
+  xlab(expression(beta[1]))
+p8 <- ggplot() + 
+  geom_histogram(aes(x = Sigma2[150:lastit])) + 
+  xlab(expression(sigma^2))
+p5 + p6 + p7 + p8 + plot_layout(ncol = 2)

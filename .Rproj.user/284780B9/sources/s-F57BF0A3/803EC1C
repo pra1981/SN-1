@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538800670292.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "803EC1C",
+    "lastKnownWriteTime" : 1538800679,
+    "last_content_update" : 1538800679493,
+    "path" : "~/Documents/School/Fall_2018/Research/SN/_config.yml",
+    "project_path" : "_config.yml",
+    "properties" : {
+        "cursorPosition" : "1,20",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "yaml"
+}

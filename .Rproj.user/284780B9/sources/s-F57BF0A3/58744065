@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538787110272.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "58744065",
+    "lastKnownWriteTime" : 1538794792,
+    "last_content_update" : 1538794792427,
+    "path" : "~/Documents/School/Fall_2018/Research/SN/nurt_sn_reg.R",
+    "project_path" : "nurt_sn_reg.R",
+    "properties" : {
+        "cursorPosition" : "111,30",
+        "scrollLine" : "70",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
