@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1538802170966.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3218051625",
+    "id" : "1077956D",
+    "lastKnownWriteTime" : 1538803026,
+    "last_content_update" : 1538803026439,
+    "path" : "~/Documents/School/Fall_2018/Research/SN/sn-shiny/skew-estimate/app.R",
+    "project_path" : "sn-shiny/skew-estimate/app.R",
+    "properties" : {
+        "cursorPosition" : "76,19",
+        "scrollLine" : "41"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
