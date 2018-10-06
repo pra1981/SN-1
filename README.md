@@ -3,6 +3,7 @@
 ## Shiny Apps
 
 - [Bayesian Estimation of Skewness Paramter](https://carter-allen.shinyapps.io/skew-estimate/)
+- [Example using simulated SN data](example.png)
 
 ## Write-Ups
 
